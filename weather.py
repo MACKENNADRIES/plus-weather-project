@@ -84,7 +84,7 @@ def load_data_from_csv(csv_file: str) -> list:
                     data_list.append(each_row)
     return data_list
 
-def find_min(weather_data: list):
+def find_min(weather_data: list) -> tuple: 
     """Calculates the minimum value in a list of numbers.
 
     Args:
@@ -194,24 +194,22 @@ def generate_daily_summary(weather_data):
     summary = []
 
     for row in weather_data:
-        # Convert temperatures from Fahrenheit to Celsius
+        
         min_temp_celsius = convert_f_to_c(row[1])
         max_temp_celsius = convert_f_to_c(row[2])
         
-        # Convert the date to a more readable format
+        
         readable_date = convert_date(row[0])
         
-        # Format each day's summary
+        
         day_summary = (
             f"---- {readable_date} ----\n"
             f"  Minimum Temperature: {min_temp_celsius:.1f}°C\n"
             f"  Maximum Temperature: {max_temp_celsius:.1f}°C\n"
         )
         
-        # Add the day's summary to the overall summary
         summary.append(day_summary)
 
-    # Join all the daily summaries into a single string and strip any trailing newline
     final_summary = "\n".join(summary) + "\n"
     
     return final_summary
