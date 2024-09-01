@@ -2,7 +2,8 @@
 
 Here is my solution to the methods!
 
-![All Tests Passing](https://your-hosted-image-link.com/flashing_badge.gif)
+![All Tests Passing](https://img.shields.io/badge/All_Tests_Passing-brightgreen)
+
 
 
 ## DONE
@@ -12,4 +13,4 @@ Here is my solution to the methods!
 
 
 # SCREENSHOTS 
-![All tests working!](testsworking.png)
+![All tests working!](images/testsworking.png)
