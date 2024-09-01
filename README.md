@@ -1,8 +1,15 @@
-# Plus Resources: Weather Project Template
+# Plus Weather Project Mackenna Dries
 
-Starter code for the Plus Weather project.
+Here is my solution to the methods!
 
-## TODO
+![All Tests Passing](https://your-hosted-image-link.com/flashing_badge.gif)
 
-- [ ] Implement the methods in `weather.py`.
-- [ ] Verify that everything works as intended by running the tests with `python run_tests.py`.
+
+## DONE
+
+- [x] Implement the methods in `weather.py`.
+- [x] Verify that everything works as intended by running the tests with `python run_tests.py`.
+
+
+# SCREENSHOTS 
+![All tests working!](testsworking.png)

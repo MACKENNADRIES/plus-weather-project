@@ -3,7 +3,7 @@ from datetime import datetime
 
 DEGREE_SYMBOL = u"\N{DEGREE SIGN}C"
 
-def format_temperature(temp: str):
+def format_temperature(temp: str) -> str:
     """Takes a temperature and returns it in string format with the degrees
         and Celcius symbols.
 
@@ -75,7 +75,7 @@ def load_data_from_csv(csv_file: str) -> list:
     data_list = []
     with open(csv_file, mode='r') as file:
             csv_reader = csv.reader(file)
-            next(csv_reader)  # Skipping the header row
+            next(csv_reader)  
             for each_row in csv_reader:
                 if each_row:
                     # Convert the last two elements to integers or floats
@@ -107,7 +107,7 @@ def find_min(weather_data: list) -> tuple:
     return min_value, min_index
 
 
-def find_max(weather_data):
+def find_max(weather_data: list) -> tuple:
     """Calculates the maximum value in a list of numbers.
 
     Args:
@@ -121,6 +121,8 @@ def find_max(weather_data):
     max_value = float(weather_data[0])
     max_index = 0
 
+    # find the index
+
     for i in range(len(weather_data)):
         value = float(weather_data[i])
         if value >= max_value:
@@ -130,7 +132,7 @@ def find_max(weather_data):
     return max_value, max_index
 
 
-def generate_summary(weather_data):
+def generate_summary(weather_data: list) -> str:
     """Outputs a summary for the given weather data.
 
     Args:
@@ -183,7 +185,7 @@ def generate_summary(weather_data):
     return overview
 
 
-def generate_daily_summary(weather_data):
+def generate_daily_summary(weather_data: list) -> str:
     """Outputs a daily summary for the given weather data.
 
     Args:
@@ -210,6 +212,7 @@ def generate_daily_summary(weather_data):
         
         summary.append(day_summary)
 
+# add extra line break to match the expected output
     final_summary = "\n".join(summary) + "\n"
     
     return final_summary
